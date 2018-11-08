@@ -8,7 +8,7 @@ COIN_CLI='betdex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/zoldur/Betdex/releases/download/v2.5.0.0/betdex.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='Altbet'
+COIN_NAME='Betdex'
 COIN_PORT=10101
 RPC_PORT=10102
 
