@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.betdex'
 COIN_DAEMON='betdexd'
 COIN_CLI='betdex-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/zoldur/Betdex/releases/download/v2.5.0.0/betdex.tar.gz'
+COIN_TGZ='https://github.com/Bet-DEX/betdex/releases/download/v2.5.1.0/betdex-2.5.1-linux64.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Betdex'
 COIN_PORT=10101
@@ -25,7 +25,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  tar xvzf $COIN_ZIP  >/dev/null 2>&1
+  tar xvzf $COIN_ZIP --strip 2 >/dev/null 2>&1
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
